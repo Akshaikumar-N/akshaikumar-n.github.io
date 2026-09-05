@@ -1,55 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Akshaikumar N</title>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akshai — AI &amp; Data Engineer</title>
+<meta name="description" content="Portfolio of Akshai, an AI &amp; Data Engineer working across machine learning, data engineering and generative AI." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Akshaikumar N</h1>
-    <p>Deep Learning Enthusiast | ML Developer</p>
-  </header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am passionate about building AI systems, especially in anomaly detection,
-      computer vision, and real-world ML applications.
-    </p>
-  </section>
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a class="nav__mark" href="#home" id="nav-name">Akshai</a>
 
-  <section>
-    <h2>Projects</h2>
+    <nav class="nav__links" id="nav-links" aria-label="Section navigation">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <div class="card">
-      <h3>Anomaly Detection System</h3>
-      <p>Detect defects in industrial conveyor systems using deep learning.</p>
+    <div class="nav__actions">
+      <a class="btn btn--small js-github" href="#" target="_blank" rel="noopener">GitHub</a>
+      <a class="nav__icon-link js-linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="nav__icon-link js-email" href="#">Email</a>
     </div>
 
-    <div class="card">
-      <h3>Crop Disease Detection</h3>
-      <p>Image-based system to detect crop diseases at early stages.</p>
+    <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__mobile" id="nav-mobile">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <div class="nav__mobile-socials">
+      <a class="js-github" href="#" target="_blank" rel="noopener">GitHub</a>
+      <a class="js-linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="js-email" href="#">Email</a>
     </div>
+  </div>
+</header>
 
+<main id="main">
+
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="hero__hi">Hi, I'm</p>
+        <h1 class="hero__name" id="hero-name">Akshai</h1>
+        <p class="hero__role" id="hero-role">AI &amp; Data Engineer</p>
+        <p class="hero__bio" id="hero-bio">Loading…</p>
+        <div class="hero__ctas">
+          <a class="btn btn--primary" href="#projects">View projects</a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero__graphic" aria-hidden="true">
+        <svg viewBox="0 0 560 240" class="pipeline" xmlns="http://www.w3.org/2000/svg">
+          <path id="flow" class="pipeline__line"
+            d="M50,150 Q110,60 170,70 Q230,180 290,160 Q350,40 410,60 Q460,170 510,140" />
+
+          <circle class="pipeline__packet" cx="50" cy="150" r="4" style="offset-path:url(#flow); animation-delay:0s;" />
+          <circle class="pipeline__packet" cx="50" cy="150" r="4" style="offset-path:url(#flow); animation-delay:3s;" />
+
+          <g class="pipeline__node">
+            <circle cx="50" cy="150" r="6" />
+            <text x="50" y="176">Data</text>
+          </g>
+          <g class="pipeline__node">
+            <circle cx="170" cy="70" r="6" />
+            <text x="170" y="52">Models</text>
+          </g>
+          <g class="pipeline__node">
+            <circle cx="290" cy="160" r="6" />
+            <text x="290" y="186">Vectors</text>
+          </g>
+          <g class="pipeline__node">
+            <circle cx="410" cy="60" r="6" />
+            <text x="410" y="42">Agents</text>
+          </g>
+          <g class="pipeline__node">
+            <circle cx="510" cy="140" r="6" />
+            <text x="510" y="166">Decisions</text>
+          </g>
+        </svg>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <p>Python, Deep Learning, Computer Vision, FastAPI</p>
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section__title">Skills</h2>
+      <div class="skills" id="skills-list"></div>
+    </div>
   </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-    <p>GitHub: github.com/akshaikumar-n</p>
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section__title">Projects</h2>
+      <div class="rows" id="projects-list"></div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2026 Akshaikumar N</p>
-  </footer>
+  <section class="section" id="certificates">
+    <div class="container">
+      <h2 class="section__title">Certificates</h2>
+      <div class="rows" id="certificates-list"></div>
+    </div>
+  </section>
 
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section__title">Experience</h2>
+      <div class="rows" id="experience-list"></div>
+    </div>
+  </section>
+
+  <section class="section" id="hobbies">
+    <div class="container">
+      <h2 class="section__title">Hobbies</h2>
+      <div class="hobbies" id="hobbies-list"></div>
+    </div>
+  </section>
+
+  <section class="section section--contact" id="contact">
+    <div class="container contact">
+      <h2 class="section__title">Get in touch</h2>
+      <p class="contact__line">The easiest way to reach me is by email.</p>
+
+      <div class="contact__email-row">
+        <a class="contact__email js-email" id="contact-email" href="#"></a>
+        <button class="copy-btn" id="copy-email-btn" type="button">Copy</button>
+      </div>
+
+      <div class="contact__socials">
+        <a class="link-underline js-github" href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="link-underline js-linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year"></span> <span id="footer-name">Akshai</span>. Built with HTML, CSS and JavaScript.</p>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
